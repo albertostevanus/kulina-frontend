@@ -16,7 +16,7 @@
       <div id="logo" class="pull-left">
         <img src="img/kulina-logo-white.svg" alt="" title="" />
       </div>
-      <nav id="nav-menu-container">
+      <nav class="topnav" id="nav-menu-container">
         <ul class="nav-menu">
           <li><a href="#about">About Us</a></li>
           <li><a class="nav-active" href="#careers">Careers</a></li>
@@ -25,12 +25,12 @@
       </nav>
       <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
-    <section id="center-text">
-      <div class="justify-content-center">
+    <div id="center-text">
         <h1>Join an Impactful Company</h1>
-        <a id="scrollDown" href="#about"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
-      </div>
-    </section>
+        <a id="scrollDown" href="#about">
+          <img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png">
+        </a>
+    </div>
   </header>
   <div class="container-fluid">
     <div class= "row">
@@ -134,5 +134,15 @@
     </div>
     <div class="clear"></div>
   </div>
+  <script>
+    function myFunction() {
+        var x = document.getElementById("nav-menu-container");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+  </script>
 </body>
 </html>
